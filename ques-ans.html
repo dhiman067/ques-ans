@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+</head>
+
+<body style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    <h3>ques(1): difference between map, filter, foreach, find</h3>
+    <p style="font-size: larger;">All of these methods take a function as an argument and execute that function on each
+        element of the array, but they differ in what they do with the returned value of the function.
+    <ol style="font-size: larger;">
+        <li> <b>map:</b> Each element of an array is returned by map</li>
+        <li> <b>filter:</b> A filter returns a new array with only the elements that function returns true </li>
+        <li> <b>filter:</b> for each calls the function for each element without returinig anything </li>
+        <li> <b>find:</b> find returns the first element when the function is called </li>
+    </ol>
+    </p>
+    <h3>ques(2): local storage, session storage, cookies</h3>
+
+    <ol style="font-size: larger;">
+        <li> <b>Local storage:</b> The LocalStorage API allows developers to store key-value pairs in the browser with
+            no expiration date. This means that data stored using LocalStorage will persist even after the browser is
+            closed and reopened. LocalStorage is a great choice for storing data that needs to be used across multiple
+            sessions.</li>
+        <li> <b>session storage:</b> The SessionStorage API is very similar to LocalStorage, but the data is only
+            available for the duration of the browser session. When the browser is closed, all data stored using
+            SessionStorage is deleted. This makes SessionStorage a great choice for storing temporary data that doesn't
+            need to persist across multiple sessions. </li>
+        <li> <b>cookies:</b> Cookies are small text files that are stored on the client-side by the browser. They can be
+            used to store user preferences or other small amounts of data. Unlike LocalStorage and SessionStorage,
+            cookies can have an expiration date, which makes them a good choice for storing data that needs to expire
+            after a certain amount of time. </li>
+    </ol>
+
+    <h3>ques(3): what is event loop?</h3>
+    <p style="font-size: larger; width: 50%;">The event loop works by maintaining a queue of tasks that need to be
+        executed. When a task is added to the queue, the event loop checks whether the call stack is empty. If the call
+        stack is empty, the next task in the queue is picked up and executed. If the call stack is not empty, the event
+        loop waits until the call stack is empty before picking up the next task.
+    <p style="font-size: larger; width: 50%;"> Here is an overview of the steps involved in the event loop:</p>
+    <ol style="font-size: larger; width: 50%;">
+        <li>JavaScript code is executed synchronously, line by line, until an asynchronous task is encountered.
+
+        </li>
+        <li>Asynchronous tasks, such as network requests or timers, are sent to the browser's Web API for processing.
+
+        </li>
+        <li>The JavaScript engine continues to execute the remaining synchronous code.
+
+        </li>
+        <li>When an asynchronous task is completed, a callback function is added to the task queue.
+
+        </li>
+        <li>The event loop continually checks whether the call stack is empty.
+
+        </li>
+        <li>If the call stack is empty, the event loop picks up the next task in the queue and executes its callback
+            function.
+
+        </li>
+        <li>If the call stack is not empty, the event loop waits until the call stack is empty before picking up the
+            next task.
+
+        </li>
+    </ol>
+    </p>
+    <h3>quiz-timer function</h3>
+    <p style="font-size: larger; width: 50%;">The purpose of the quizTimer function is to display a timer on a web page for a quiz or other time-limited activity. The function sets up a setInterval loop that updates the timer display on the page every second.
+
+        The timer starts at 00:00 and counts up by seconds until it is dismissed. The timer display is updated to show the elapsed time in minutes and seconds, as well as a sub-script indicating that the units are in seconds.
+        
+        Additionally, after the timer runs for more than 60 seconds, the color of the timer text alternates between red shades every two seconds to create a visual effect for the user.
+        
+        The function takes an optional dismiss parameter, which when passed as true, clears the timer interval and stops the timer. This is useful when the quiz or activity is completed before the time limit is reached.
+    </p>
+
+    <h3>choose-quiz function</h3>
+    <p style="font-size: larger; width: 50%;">The purpose of the chooseQuiz function is to allow the user to select an answer to a quiz question and save that answer to an array of user responses.
+
+        The function takes two parameters: index and givenAns. The index parameter is the index of the quiz question being answered, and givenAns is the answer chosen by the user.
+        
+        The function first checks if an answer for the current quiz question already exists in the answers array. If an answer exists, it is updated with the new answer selected by the user. If an answer does not exist, a new answer object is created and added to the answers array.
+        
+        Once the user's answer is saved in the answers array, the displayAnswers function is called to update the user interface with the current list of quiz questions and their associated answers.
+        
+        Overall, this function is used to track and record the user's answers to a quiz and display them to the user for review or submission.
+    </p>
+
+</body>
+
+</html>
